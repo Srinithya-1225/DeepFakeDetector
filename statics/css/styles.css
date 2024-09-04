@@ -1,0 +1,65 @@
+/* Define color variables */
+:root {
+    --background-gradient: linear-gradient(to right, #1e3c72, #2a5298); /* Modern Blue Gradient */
+    --button-color: #ff6f61; /* Coral */
+    --button-hover-color: #e55b50; /* Darker Coral */
+    --navbar-background: linear-gradient(to right, #1e3c72, #2a5298); /* Match Navbar to Background */
+    --footer-background: #1e3c72; /* Dark Blue Footer */
+    --text-color: #fff; /* White text */
+}
+
+/* Apply color variables */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.jumbotron {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    text-align: center;
+    background: var(--background-gradient);
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: var(--navbar-background);
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: var(--footer-background);
+    color: var(--text-color);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--button-color);
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--button-hover-color);
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detector</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        .jumbotron {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+        }
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+        }
+        .footer {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            background-color: #1e3c72;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .display-4, .lead {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .btn-primary {
+            background-color: #ff6f61;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .btn-primary:hover {
+            background-color: #e55b50;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand text-white" href="/">Deepfake Detector</a>
+    </nav>
+    <div class="jumbotron">
+        <h1 class="display-4">Detect Deepfakes with Ease</h1>
+        <p class="lead">Upload your videos and let our tool analyze them for authenticity.</p>
+        <a href="/register" class="btn btn-lg btn-primary">Get Started</a>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Deepfake Detector. All rights reserved.</p>
+        <p><a href="/privacy" class="text-white">Privacy Policy</a> | <a href="/terms" class="text-white">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
