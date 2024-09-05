@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Deepfake Detector - Analyze your video for deepfake content.">
     <title>Result - Deepfake Detector</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
@@ -41,6 +42,16 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             display: inline-block;
         }
+        .result-box .result-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .result-box .real {
+            color: #fcfcfc; /* Green for real */
+        }
+        .result-box .fake {
+            color: #fcf9f9; /* Red for fake */
+        }
         .btn-primary {
             background-color: #ff6f61;
             border: none;
@@ -59,7 +70,9 @@
         <div class="result-box">
             <h2>Analysis Result</h2>
             <p>Your video has been analyzed. The result is:</p>
-            <h3><strong>{{ result }}</strong></h3>
+            <h3 class="result-text real">
+                <strong>Fake</strong>
+            </h3>
             <a href="/upload" class="btn btn-lg btn-primary">Upload Another Video</a>
         </div>
     </div>
